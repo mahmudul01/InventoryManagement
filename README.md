@@ -52,6 +52,6 @@ CREATE TABLE IF NOT EXISTS warehouses (
 ### Insert a test data
 ```
 INSERT INTO warehouses (id, name, address, phone )
-VALUES (1000, 'Central Storage', 'New York, NY', '+1 212-555-1234');
+VALUES (1000, 'Central Storage', 'New York', '+1 212-555-1234');
 ```
 
