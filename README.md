@@ -40,3 +40,18 @@ CREATE TABLE IF NOT EXISTS suppliers (
 INSERT INTO suppliers (name, email, phone, address)
 VALUES ('Shohag Ahmed', 'shohag@example.com', '543-456-7890', '123 Md Pur, Cityville');
 ```
+### Create warehouses table:
+```
+CREATE TABLE IF NOT EXISTS warehouses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    address TEXT NOT NULL,
+    phone VARCHAR(15) NOT NULL
+);
+```
+### Insert a test data
+```
+INSERT INTO warehouses (id, name, address, phone )
+VALUES (1000, 'Central Storage', 'New York, NY', '+1 212-555-1234');
+```
+
