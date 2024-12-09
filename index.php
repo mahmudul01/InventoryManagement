@@ -9,7 +9,7 @@
 <body>
 <div class="container mt-5">
     <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-6 mb-3">
         <div class="card">
         <div class="card-body">
             <h5 class="card-title">Customer Page</h5>
@@ -18,12 +18,30 @@
         </div>
         </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6 mb-3">
         <div class="card">
         <div class="card-body">
             <h5 class="card-title">Supplier Page</h5>
             <p class="card-text">Click the button below to go to supplier page</p>
             <a href="/InventoryManagement/Supplier/index.php" class="btn btn-primary">View</a>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-6 mb-3">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Warehouse Page</h5>
+            <p class="card-text">Click the button below to go to warehouse page</p>
+            <a href="/InventoryManagement/Warehouse/index.php" class="btn btn-primary">View</a>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-6 mb-3">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Stock Page</h5>
+            <p class="card-text">Click the button below to go to stock page</p>
+            <a href="/InventoryManagement/Stock/index.php" class="btn btn-primary">View</a>
         </div>
         </div>
     </div>

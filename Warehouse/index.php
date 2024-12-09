@@ -13,7 +13,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Fetch customers from the database
+// Fetch warehouses from the database
 $sql = "SELECT * FROM warehouses";
 $result = $conn->query($sql);
 
@@ -45,7 +45,7 @@ $conn->close();
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Address</th>
+                <th>Location</th> <!-- Updated from "Address" to match schema -->
                 <th>Phone</th>
                 <th>Actions</th>
             </tr>
@@ -56,13 +56,13 @@ $conn->close();
                     <tr>
                         <td><?php echo $row['id']; ?></td>
                         <td><?php echo $row['name']; ?></td>
-                        <td><?php echo $row['address']; ?></td>
+                        <td><?php echo $row['location']; ?></td> <!-- Updated key -->
                         <td><?php echo $row['phone']; ?></td>
                         <td>
                             <!-- Edit button linking to the edit page with the warehouse id -->
                             <a href="edit_warehouse.php?id=<?php echo $row['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
                             <!-- Delete button linking to the delete page with the warehouse id -->
-                            <a href="delete_warehouse.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this customer?')">Delete</a>
+                            <a href="delete_warehouse.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this warehouse?')">Delete</a>
                         </td>
                     </tr>
                 <?php endwhile; ?>

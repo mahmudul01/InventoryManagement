@@ -38,13 +38,13 @@ if (isset($_GET['id'])) {
 // PHP code to handle form submission for updating warehouse data
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && $id !== null) {
     $name = $_POST['name'];
-    $address = $_POST['address'];
+    $location = $_POST['location'];
     $phone = $_POST['phone'];
 
     // Update the warehouse data in the database
-    $sql = "UPDATE warehouses SET name = ?, address = ?, phone = ? WHERE id = ?";
+    $sql = "UPDATE warehouses SET name = ?, location = ?, phone = ? WHERE id = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssi", $name, $address, $phone, $id);
+    $stmt->bind_param("sssi", $name, $location, $phone, $id);
 
     if ($stmt->execute()) {
         echo "<div class='alert alert-success'> Warehouse Updated Successfully!</div>";
@@ -86,8 +86,8 @@ $conn->close();
         </div>
 
         <div class="mb-3">
-            <label for="address" class="form-label">Address</label>
-            <textarea class="form-control" id="address" name="address" required><?php echo htmlspecialchars($warehouse['address'], ENT_QUOTES); ?></textarea>
+            <label for="location" class="form-label">Location</label>
+            <textarea class="form-control" id="location" name="location" required><?php echo htmlspecialchars($warehouse['location'], ENT_QUOTES); ?></textarea>
         </div>
         <div class="mb-3">
             <label for="phone" class="form-label">Phone Number</label>

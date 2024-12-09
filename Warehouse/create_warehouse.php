@@ -17,16 +17,16 @@ if ($conn->connect_error) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
     $name = $_POST['name'];
-    $address = $_POST['address'];
+    $location = $_POST['location'];
     $phone = $_POST['phone'];
 
     {
         // Insert the data into the warehouses table
-        $sql = "INSERT INTO warehouses (id, name, address, phone) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO warehouses (id, name, location, phone) VALUES (?, ?, ?, ?)";
 
         // Prepare and bind
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("isss", $id, $name, $address, $phone);
+        $stmt->bind_param("isss", $id, $name, $location, $phone);
 
         // Execute the statement
         if ($stmt->execute()) {
@@ -76,8 +76,8 @@ $conn->close();
         </div>
 
         <div class="mb-3">
-            <label for="address" class="form-label">Address</label>
-            <textarea class="form-control" id="address" name="address" required></textarea>
+            <label for="location" class="form-label">Location</label>
+            <textarea class="form-control" id="location" name="location" required></textarea>
         </div>
 
         <div class="mb-3">
