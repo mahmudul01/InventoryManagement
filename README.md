@@ -64,6 +64,7 @@ CREATE TABLE IF NOT EXISTS purchases (
     product_id INT NOT NULL,
     warehouse_id INT NOT NULL,
     total_amount DECIMAL(10, 2) NOT NULL,
+    quantity INT NOT NULL,
     FOREIGN KEY (supplier_id) REFERENCES suppliers(id),
     FOREIGN KEY (product_id) REFERENCES products(id),
     FOREIGN KEY (warehouse_id) REFERENCES warehouses(id)
@@ -74,15 +75,15 @@ CREATE TABLE IF NOT EXISTS sales (
     id INT PRIMARY KEY AUTO_INCREMENT,
     invoice_number VARCHAR(50) NOT NULL,
     customer_id INT NOT NULL,
-    purchase_date DATE NOT NULL,
+    sale_date DATE NOT NULL,
     product_id INT NOT NULL,
     warehouse_id INT NOT NULL,
     total_amount DECIMAL(10, 2) NOT NULL,
+    quantity INT NOT NULL,
     FOREIGN KEY (customer_id) REFERENCES customers(id),
     FOREIGN KEY (product_id) REFERENCES products(id),
     FOREIGN KEY (warehouse_id) REFERENCES warehouses(id)
 );
-
 ```
 
 ### Insert seed data for all tables
