@@ -39,9 +39,36 @@
     <div class="col-sm-6 mb-3">
         <div class="card">
         <div class="card-body">
+            <h5 class="card-title">Product Page</h5>
+            <p class="card-text">Click the button below to go to product page</p>
+            <a href="/InventoryManagement/Product/index.php" class="btn btn-primary">View</a>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-6 mb-3">
+        <div class="card">
+        <div class="card-body">
             <h5 class="card-title">Stock Page</h5>
             <p class="card-text">Click the button below to go to stock page</p>
             <a href="/InventoryManagement/Stock/index.php" class="btn btn-primary">View</a>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-6 mb-3">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Purchase Page</h5>
+            <p class="card-text">Click the button below to go to purchase page</p>
+            <a href="/InventoryManagement/Purchase/index.php" class="btn btn-primary">View</a>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-6 mb-3">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Sale Page</h5>
+            <p class="card-text">Click the button below to go to sale page</p>
+            <a href="/InventoryManagement/Sale/index.php" class="btn btn-primary">View</a>
         </div>
         </div>
     </div>
